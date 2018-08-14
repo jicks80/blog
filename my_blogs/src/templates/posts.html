@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+hi
+
+<div class="container">
+    <h2>blog</h2>
+    {% for blog in blog %}
+        <h3><a href="">{{ blog.ArtTitle }}</a></h3>
+        <p>{{ blog.ArtContent }}</p>
+
+        <a href="{{ url_for('pages',user = blog.ArtId  ) }}">particular page {{ blog.ArtTitle }}</a>
+
+
+        <hr>
+    {% endfor %}
+</div>
+{% endblock %}

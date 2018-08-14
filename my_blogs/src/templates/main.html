@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}"/>
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/mdb.min.css') }}"/>
+
+     {% block head %}
+
+    {% endblock %}
+</head>
+
+<body>
+
+<!-- particles.js container -->
+<div id="particles-js"></div>
+
+<!-- Start your project here-->
+<!-- header portion-->
+<header>
+    <!--Navbar-->
+
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark ">
+        <div class="container ">
+            <a class="navbar-brand" href="#"><strong>Navbar</strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">Categories</a>
+                        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="{{ url_for('page',user= 'IOT') }}">IOT</a>
+                            <a class="dropdown-item" href="#">AI</a>
+                            <a class="dropdown-item" href="#">GAME TECH</a>
+                        </div>
+                    </li>
+
+                </ul>
+                </ul>
+            </div>
+
+
+            <!-- Dropdown -->
+
+            <!-- Links -->
+
+            <form class="form-inline">
+                <div class="md-form my-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                </div>
+            </form>
+        </div>
+        <!-- Collapsible content -->
+    </nav>
+
+
+    <!--/.Navbar-->
+</header>
+
+
+<!-- main portion -->
+<main class="main mt-5">
+
+
+{% block content %}
+
+
+
+
+{% endblock %}
+
+
+</main>
+<!--footer-->
+<footer></footer>
+
+
+<!-- /Start your project here-->
+<!-- SCRIPTS -->
+<!-- particle js -->
+
+
+<!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<script type="text/javascript" src="{{ url_for('static',filename='js/particle.js') }}"></script>
+
+<!--/ particle js-->
+
+
+<!-- JQuery -->
+<script type="text/javascript" src="{{ url_for('static',filename='js/jquery-3.3.1.min.js') }}"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="{{ url_for('static',filename='js/popper.min.js' ) }}"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="{{ url_for('static',filename='js/bootstrap.min.js' ) }}"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="{{ url_for('static',filename='js/mdb.min.js' ) }}"></script>
+</body>
+
+</html>
