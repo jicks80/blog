@@ -3,7 +3,7 @@
 
 body{
 
-    
+
 
     height: 100%
       background-repeat: no-repeat;
@@ -35,7 +35,7 @@ body{
     }
 }
 
-/* ---- reset ---- */ body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; } 
+/* ---- reset ---- */ body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; }
 						canvas{ display: block; vertical-align: bottom; }
  /* ---- particles.js container ---- */
  #particles-js{ width: 100%;
@@ -43,23 +43,23 @@ body{
     position: fixed;
     z-index: -10;
     top: 0;
-    left: 0 } 
-     
+    left: 0 }
+
  #container1
   {
   	background-color:black;
-  	
+
   	padding:5px;
   }
  .card
  {
- 	opacity:0.8;
+
 
   	background-color:black;
  }
  .card-body
  {
-  opacity:0.8;
+
 
     background-color:black;
  }
@@ -86,7 +86,7 @@ box-shadow: 0px 0px 5px rgba(0,0,0,.3); }
   margin-left: 101px;
 margin-top: 21px;
 }
-#date{ 
+#date{
   margin-left: 101px; color: #999; }
 #share{
 
@@ -98,13 +98,13 @@ border-top: 1px solid #ddd;
 border-bottom: 1px solid #ddd;
 }
 #BlogDetail{
-  color: #999; 
+  color: #999;
   background-color: black;
-  opacity: 0.8
+
 }
 .blogContent{
   color: #f1f2f0e6;
-  font-size:18px; 
+  font-size:18px;
 }
 
 .shadow-textarea textarea.form-control::placeholder {
