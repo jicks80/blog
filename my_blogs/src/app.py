@@ -1,8 +1,12 @@
-from flask import Flask, render_template, request, session, make_response
-
+from flask import Flask, render_template
 from src.common.database import Database
 from src.models.post import Article
 
+from flask import Flask, render_template
+
+from src.common.database import Database
+from src.models.post import Article
+from babel import  dates
 app = Flask(__name__)  # '__main__'
 app.secret_key = "jose"
 
@@ -11,6 +15,7 @@ app.secret_key = "jose"
 def home_template():
     return render_template('/html')
 '''
+
 
 @app.before_first_request
 def initialize_database():
@@ -31,10 +36,11 @@ def pages(user):
     return render_template('index.html', blog=blog)
 
 
-@app.route('/page/<string:user>')
+@app.route('/pages1/<string:user>')
 def pages1(user):
     blog = Article.fetch_article(user)
-    return render_template('singlepost.html', blog=blog)
+    blogs = Article.fetch_all()
+    return render_template('singlepost.html', blog=blog,blogs=blogs,date=dates.format_date(blog.ArtCdate, 'full'))
 
 
 if __name__ == '__main__':

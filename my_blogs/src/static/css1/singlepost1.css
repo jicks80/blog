@@ -4,7 +4,7 @@
 body{
 
     background-color: #4242ad24;
-
+  
         height: 100%
       background-repeat: no-repeat;
 }
@@ -35,7 +35,7 @@ body{
     }
 }
 
-/* ---- reset ---- */ body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; }
+/* ---- reset ---- */ body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; } 
 						canvas{ display: block; vertical-align: bottom; }
  /* ---- particles.js container ---- */
  #particles-js{ width: 100%;
@@ -43,22 +43,22 @@ body{
     position: fixed;
     z-index: -10;
     top: 0;
-    left: 0 }
-
+    left: 0 } 
+     
  #container1
   {
-
+  
   	padding:5px;
   }
  .card
  {
-
+ 	
 
   	background-color:#000000;
  }
  .card-body
  {
-
+  
 
     background-color:#000000;
     color: #eae6ffab;
@@ -88,7 +88,7 @@ box-shadow: 0px 0px 5px rgba(0,0,0,.3); }
   margin-left: 101px;
 margin-top: 21px;
 }
-#date{
+#date{ 
   margin-left: 101px; color: #999; }
 #share{
 
@@ -100,15 +100,15 @@ border-top: 1px solid #ddd;
 border-bottom: 1px solid #ddd;
 }
 #BlogDetail{
-  color: black;
+  color: black; 
   background-color:#000000;
   opacity: 0.9;
 
-
+ 
 }
 .blogContent{
   color: white;
-  font-size:18px;
+  font-size:18px; 
 }
 
 .shadow-textarea textarea.form-control::placeholder {
@@ -121,4 +121,51 @@ border-bottom: 1px solid #ddd;
 
 #main{
  z-index: 1;}
+
+ #ct-socials {
+    position: fixed;
+    top: 25%;
+    right: 0;
+    list-style: none;
+    padding-left: 0;
+    z-index: 10;
+    margin: 0;
+    -webkit-transition: right 0.25s ease-in-out;
+    transition: right 0.25s ease-in-out;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+#ct-socials li {
+    padding: 0px 0;
+}
+#ct-socials li a {
+    background: #3f4653;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #fff;
+    width: 44px;
+    height: 54px;
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+    float: right;
+    padding-left: 5px;
+}
+#ct-socials li a:hover {
+	width: 54px;
+	padding-left: 0;
+	text-decoration: none;
+	background: #3f4653;
+}
 

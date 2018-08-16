@@ -3,7 +3,7 @@
 {% block head %}
 <!-- Your custom styles (optional) -->
 <link rel="stylesheet" href="{{ url_for('static',filename='css1/singlepost1.css') }}"/>
-<link rel="stylesheet" href="{{ url_for('static',filename='css/singlepost.css') }}"/>
+
 {% endblock %}
 
 {% block content %}
@@ -13,10 +13,11 @@
 
     <!-- Grid row -->
     <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-3">
+
         </div>
         <!-- Grid column -->
-        <div class="col-md-8" id="BlogDetail" ;>
+        <div class="col-md-7"id="BlogDetail" ;>
 
             <!-- Card -->
             <div class="card card-cascade wider reverse">
@@ -36,7 +37,8 @@
                     <!-- Title -->
                     <h2 class="font-weight-bold">{{ blog.ArtTitle }}</h2>
                     <!-- Data -->
-                    <p>Written by <a><strong>{{ blog.ArtAuthor }}</strong></a>,{{ blog.ArtCdate }}</p>
+                    <p>Written by <a><strong>{{ blog.ArtAuthor }}</strong></a>,
+                        {{ date }}</p>
                     <!-- Social shares -->
                     <div class="social-counters">
                         <!-- Facebook -->
@@ -78,28 +80,31 @@
                     Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae
                     consequatur. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe
                     eveniet ut et voluptates repudiandae sint et molestiae non recusandae itaque earum rerum.</p>
-</div>
+            </div>
 
-                <!-- facebook comment -->
+            <!-- facebook comment -->
 
-                <div id="fb-root"></div>
-                <script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
 
-                </script>
-                <div class="fb-comments card-title "  data-href="http://127.0.0.1:4590/page/{{ blog.ArtId }}"
-                     width=100% data-numposts="10"></div>
+            <div class="fb-comments card-title " data-href="http://127.0.0.1:4550/page/{{ blog.ArtId }}"
+                 width=100% data-numposts="10"></div>
 
-                <!-- Grid column -->
+            <!-- Grid column -->
 
 
         </div>
+    <div class="col-md-2 col-small-1">
+         <ul id="ct-socials";>
+  <li><a href="https://www.addtoany.com/add_to/facebook?linkurl=http%3A%2F%2F127.0.0.1%3A4550%2Fpage1%2F%7B%7B%20blog.ArtId%20%7D%7D&amp;linkname=" target="_blank"><img src="https://static.addtoany.com/buttons/facebook.svg" width="42" height="42" style="background-color:#3f4653"></a></li>
+<li><a href="https://www.addtoany.com/add_to/twitter?linkurl=http%3A%2F%2F127.0.0.1%3A4550%2Fpage1%2F%7B%7B%20blog.ArtId%20%7D%7D&amp;linkname=" target="_blank"><img src="https://static.addtoany.com/buttons/twitter.svg" width="42" height="42" style="background-color:#3f4653"></a></li>
+<li><a href="https://www.addtoany.com/add_to/google_plus?linkurl=http%3A%2F%2F127.0.0.1%3A4550%2Fpage1%2F%7B%7B%20blog.ArtId%20%7D%7D&amp;linkname=" target="_blank"><img src="https://static.addtoany.com/buttons/google_plus.svg" width="42" height="42" style="background-color:#3f4653"></a></li>
+<li><a href="https://www.addtoany.com/add_to/whatsapp?linkurl=http%3A%2F%2F127.0.0.1%3A4550%2Fpage1%2F%7B%7B%20blog.ArtId%20%7D%7D&amp;linkname=" target="_blank"><img src="https://static.addtoany.com/buttons/whatsapp.svg" width="42" height="42" style="background-color:#3f4653"></a></li>
+<li><a href="https://www.addtoany.com/add_to/linkedin?linkurl=http%3A%2F%2F127.0.0.1%3A4550%2Fpage1%2F%7B%7B%20blog.ArtId%20%7D%7D&amp;linkname=" target="_blank"><img src="https://static.addtoany.com/buttons/linkedin.svg" width="42" height="42" style="background-color:#3f4653"></a></li>
+<li><a href="https://www.addtoany.com/add_to/copy_link?linkurl=http%3A%2F%2F127.0.0.1%3A4550%2Fpage1%2F%7B%7B%20blog.ArtId%20%7D%7D&amp;linkname=" target="_blank"><img src="https://static.addtoany.com/buttons/link.svg" width="42" height="42" style="background-color:#3f4653"></a></li>
+</ul>
+        </div>
     </div>
+
+
 </section>
 <!-- Section: Blog v.4 -->
 

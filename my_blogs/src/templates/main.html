@@ -19,7 +19,18 @@
 </head>
 
 <body>
+ <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
 
+
+
+            </script>
 <!-- particles.js container -->
 <div id="particles-js"></div>
 
@@ -39,7 +50,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -47,8 +58,8 @@
                            aria-haspopup="true" aria-expanded="false">Categories</a>
                         <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="{{ url_for('pages',user= 'IOT') }}">IOT</a>
-                            <a class="dropdown-item" href="#">AI</a>
-                            <a class="dropdown-item" href="#">GAME TECH</a>
+                            <a class="dropdown-item" href="{{ url_for('pages',user= 'AI') }}">AI</a>
+                            <a class="dropdown-item" href="{{ url_for('pages',user= 'Iot') }}">GAME TECH</a>
                         </div>
                     </li>
 
@@ -76,8 +87,10 @@
 
 
 <!-- main portion -->
-<main class="main mt-5">
+<main class="main">
+<div class="col-md-2">
 
+        </div>
 
 {% block content %}
 
