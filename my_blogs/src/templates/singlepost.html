@@ -2,6 +2,7 @@
 
 {% block head %}
 <!-- Your custom styles (optional) -->
+<link rel="stylesheet" href="{{ url_for('static',filename='css1/singlepost1.css') }}"/>
 <link rel="stylesheet" href="{{ url_for('static',filename='css/singlepost.css') }}"/>
 {% endblock %}
 
@@ -91,7 +92,7 @@
 }(document, 'script', 'facebook-jssdk'));
 
                 </script>
-                <div class="fb-comments " data-href="http://127.0.0.1:4590/page/{{ blog.ArtId }}"
+                <div class="fb-comments card-title "  data-href="http://127.0.0.1:4590/page/{{ blog.ArtId }}"
                      width=100% data-numposts="10"></div>
 
                 <!-- Grid column -->

@@ -2,17 +2,17 @@
 
 {% block head %}
 <!-- Your custom styles (optional) -->
-<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}"/>
+<link rel="stylesheet" href="{{ url_for('static',filename='css1/style1.css') }}"/>
 {% endblock %}
 
 {% block content %}
 
 <div class="container" id="container1" ;>
 
-    <div class="row mt-5">
+    <div class="row mt-3">
         <!-- Card Starts -->
         {% for blog in blog %}
-        <div class="col-lg-3 col-md-6 col-sm-6 ">
+        <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
 
             <div class="card" id="card1" ;>
 
@@ -29,7 +29,7 @@
                 <div class="card-body">
                     <!-- Title -->
 
-                    <h4 class="card-title"><a href="{{ url_for('page',user = blog.ArtId) }}">{{ blog.ArtTitle }}</a>
+                    <h4 class="card-title"><a  href="{{ url_for('page',user = blog.ArtId) }}" id="atitle";>{{ blog.ArtTitle }}</a>
                     </h4>
 
                     <i class="fa fa-clock-o pr-1"></i>{{ blog.ArtCdate }}
