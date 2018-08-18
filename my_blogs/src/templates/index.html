@@ -1,74 +1,67 @@
 {% extends "main.html" %}
 
+
 {% block head %}
 <!-- Your custom styles (optional) -->
-<link rel="stylesheet" href="{{ url_for('static',filename='css1/style1.css') }}"/>
+<!-- Font -->
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+
+
+<!-- Stylesheets -->
+
+<link rel="stylesheet" href="{{ url_for ('static', filename='common-css/bootstrap.css') }}">
+
+<link rel="stylesheet" href="{{ url_for ('static', filename='common-css/ionicons.css') }}">
+
+
+<link rel="stylesheet" href="{{ url_for ('static', filename='category/css/styles.css') }}">
+
+<link rel="stylesheet" href="{{ url_for ('static', filename='category/css/responsive.css') }}">
+
+
 {% endblock %}
 
 
 {% block content %}
 
-<div class="container mt-5" id="container1" ;>
+<div class="slider display-table center-text">
+    <h1 class="title display-table-cell"><b>{{ user }} </b></h1>
+</div><!-- slider -->
 
-    <div class="row mt-3">
-        <!-- Card Starts -->
-        {% for blog in blog %}
-        <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+<section class="blog-area section">
+    <div class="container">
 
-            <div class="card" id="card1" ;>
+        <div class="row">
+            {% for blog in blog %}
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100">
+                    <div class="single-post post-style-1">
 
-                <!-- Card image -->
-                <div class="view overlay">
-                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/food.jpg"
-                         alt="Card image cap">
-                    <a>
-                        <div class="mask rgba-white-slight"></div>
-                    </a>
-                </div>
+                        <div class="blog-image"><img src="{{ url_for ('static', filename='images/alex-lambley-205711.jpg')}}" alt="Blog Image"></div>
 
-                <!-- Card content -->
-                <div class="card-body">
-                    <!-- Title -->
+                        <a class="avatar" href="#"><img src="{{ url_for ('static', filename='images/icons8-team-355979.jpg')}}" alt="Profile Image"></a>
 
-                    <h4 class="card-title"><a  class="card-title" href="{{ url_for('pages1',user = blog.ArtId) }}" id="atitle" ;>{{
-                        blog.ArtTitle }}</a>
-                    </h4>
+                        <div class="blog-info">
 
-                    <i class="fa fa-clock-o pr-1"></i>{{ blog.ArtCdate.strftime('%A %d %B %Y') }}
-                    <hr>
-                    <!-- Text -->
-                    <p class="card-text">{{ blog.ArtContent }} </p>
-                </div>
+                            <h4 class="title"><a href="http://127.0.0.1:4550/pages1/{{ blog.ArtId }}"><b>{{ blog.ArtTitle }}</b></a></h4>
 
-                <!-- Card footer -->
-                <div class="rounded-bottom mdb-color lighten-3 text-center pt-3">
-                    <ul class="list-unstyled list-inline font-small">
-                        <li class="list-inline-item pr-2"><a href="#" class="white-text"><i class="fa fa-eye"
-                                                                                            aria-hidden="true"></i>
-                            {{ blog.ArtViews }}
-                        </a></li>
+                            <ul class="post-footer">
 
-                        <li class="list-inline-item pr-2"><a href="#" class="white-text"><i
-                                class="fa fa-comments-o pr-1"></i>
-                            <span class="fb-comments-count" data-href="http://127.0.0.1:4550/page/{{ blog.ArtId }}"></span>
-                        </a></li>
-                        <li class="list-inline-item pr-2"><a href="#" class="white-text"><i class="fa fa-thumbs-up"
-                                                                                            aria-hidden="true"></i>
 
-                        </a></li>
-                        <li class="list-inline-item"><a href="#" class="white-text"><i class="fa fa-share pr-1"
-                                                                                       aria-hidden="true"></i></a></li>
-                    </ul>
-                </div>
+                                <li><a href="#"><i class="fa fa-eye"></i>  {{ blog.ArtViews }}</a></li>
+                                <li><a href="#"><i class="fa fa-comments-o "></i><span class="fb-comments-count" data-href="http://127.0.0.1:4550/pages1/{{ blog.ArtId }}"></span></a></li>
+                                <li><a href="#"><i class="fa fa-thumbs-up"></i>  {{ blog.ArtLike }}</a></li>
+                            </ul>
 
-            </div>
-
+                        </div><!-- blog-info -->
+                    </div><!-- single-post -->
+                </div><!-- card -->
+            </div><!-- col-lg-4 col-md-6 -->
+            {% endfor %}
         </div>
-        <!-- Card  ENDS-->
-        {% endfor %}
+
     </div>
-
-</div>
-
+</section>
 
 {% endblock %}

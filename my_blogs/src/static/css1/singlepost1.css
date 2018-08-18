@@ -9,7 +9,7 @@ body{
       background-repeat: no-repeat;
 }
 
-#particles-js canvas {
+#particles-js canvas {    margin-left: 30px;
     display: block;
     vertical-align: bottom;
     -webkit-transform: scale(1);
@@ -47,7 +47,7 @@ body{
      
  #container1
   {
-  
+    margin-left: 30px;
   	padding:5px;
   }
  .card
@@ -65,7 +65,7 @@ body{
     opacity: 0.9;
     border: none;
  }
- .card-title
+ .card-title    margin-left: 30px;
  {
  	color: bisque;
  }
@@ -169,3 +169,16 @@ border-bottom: 1px solid #ddd;
 	background: #3f4653;
 }
 
+#list-group
+{
+  text-align: -webkit-center;
+  background-color: black;
+  margin-left: 10px;
+  border-style: solid;
+  border-color: #8c8c8c;
+  border-width: 41px 0 41px 0;
+  border-radius:30px;
+  opacity: 0.9;
+  color: white;
+
+}

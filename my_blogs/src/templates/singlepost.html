@@ -3,109 +3,223 @@
 {% block head %}
 <!-- Your custom styles (optional) -->
 <link rel="stylesheet" href="{{ url_for('static',filename='css1/singlepost1.css') }}"/>
+<!-- Font -->
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" >
+
+
+<!-- Stylesheets -->
+
+<link rel="stylesheet" href="{{ url_for ('static', filename='common-css/bootstrap.css') }}" >
+
+<link rel="stylesheet" href="{{ url_for ('static', filename='common-css/ionicons.css') }}" >
+
+
+<link  rel="stylesheet" href="{{ url_for ('static', filename='single-post-1/css/styles.css') }}" >
+
+<link  rel="stylesheet" href="{{ url_for ('static', filename='single-post-1/css/responsive.css') }}" >
+
 
 {% endblock %}
 
 {% block content %}
 
 <!-- Section: Blog v.4 -->
-<section class="my-5">
+<div class="slider">
+    <div class="display-table  center-text">
+        <h1 class="title display-table-cell"><b>DESIGN</b></h1>
+    </div>
+</div><!-- slider -->
 
-    <!-- Grid row -->
-    <div class="row">
-        <div class="col-md-3">
+<section class="post-area section">
+    <div class="container">
 
-        </div>
-        <!-- Grid column -->
-        <div class="col-md-7"id="BlogDetail" ;>
+        <div class="row">
 
-            <!-- Card -->
-            <div class="card card-cascade wider reverse">
+            <div class="col-lg-8 col-md-12 no-right-padding">
 
-                <!-- Card image -->
-                <div class="view view-cascade overlay">
-                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Slides/img%20(142).jpg"
-                         alt="Sample image">
-                    <a href="#!">
-                        <div class="mask rgba-white-slight"></div>
-                    </a>
-                </div>
+                <div class="main-post">
 
-                <!-- Card content -->
-                <div class="card-body card-body-cascade text-center">
+                    <div class="blog-post-inner">
 
-                    <!-- Title -->
-                    <h2 class="font-weight-bold">{{ blog.ArtTitle }}</h2>
-                    <!-- Data -->
-                    <p>Written by <a><strong>{{ blog.ArtAuthor }}</strong></a>,
-                        {{ date }}</p>
-                    <!-- Social shares -->
-                    <div class="social-counters">
-                        <!-- Facebook -->
-                        <a class="btn btn-fb">
-                            <i class="fa fa-facebook pr-2"></i>
-                            <span class="clearfix d-none d-md-inline-block">Facebook</span>
-                        </a>
-                        <!-- Twitter -->
-                        <a class="btn btn-tw">
-                            <i class="fa fa-twitter pr-2"></i>
-                            <span class="clearfix d-none d-md-inline-block">Twitter</span>
-                        </a>
-                        <!-- Google+ -->
-                        <a class="btn btn-gplus">
-                            <i class="fa fa-google-plus pr-2"></i>
-                            <span class="clearfix d-none d-md-inline-block">Google+</span>
-                        </a>
+                        <div class="post-info">
 
-                        <!-- Google+ -->
-                        <a class="btn btn-li">
-                            <i class="fa fa-linkedin pr-2"></i>
-                            <span class="clearfix d-none d-md-inline-block">Linkedin</span>
-                        </a>
-                        <!-- Comments -->
-                    </div>
-                    <!-- Social shares -->
+                            <div class="left-area">
+                                <a class="avatar" href="#"><img src="{{ url_for ('static', filename='images/avatar-1-120x120.jpg') }}"
+                                                                alt="Profile Image"></a>
+                            </div>
 
-                </div>
-                <!-- Card content -->
+                            <div class="middle-area">
+                                <a class="name" href="#"><b>{{ blog.ArtAuthor }}</b></a>
+                                <h6 class="date"> {{ date }}</h6>
+                            </div>
 
-            </div>
-            <!-- Card -->
-            <!-- Excerpt -->
-            <div class="mt-5">
+                        </div><!-- post-info -->
 
-                <p class="blogContent">{{ blog.ArtContent }}</p>
-                <p class="blogContent">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo
-                    minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
-                    Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae
-                    consequatur. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe
-                    eveniet ut et voluptates repudiandae sint et molestiae non recusandae itaque earum rerum.</p>
-            </div>
+                        <h3 class="title"><a href="#"><b> {{ blog.ArtTitle }}</b></a></h3>
 
-            <!-- facebook comment -->
+                        <p class="para">{{ blog.ArtContent }}</p>
+
+                        <div class="post-image"><img src="{{ url_for ('static', filename='images/blog-1-1000x600.jpg') }}" alt="Blog Image"></div>
+
+                        <p class="para">
+                            {{ blog.ArtContent }}
+
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex
+                            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                            dolore eu fugiat
+                            nulla pariatur. Excepteur sint
+                            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                            laborum</p>
 
 
-            <div class="fb-comments card-title " data-href="http://127.0.0.1:4550/page/{{ blog.ArtId }}"
+
+                    </div><!-- blog-post-inner -->
+
+
+                    <!-- post-info -->
+ <div class="fb-comments card-title " data-href="http://127.0.0.1:4550/page/{{ blog.ArtId }}"
                  width=100% data-numposts="10"></div>
 
-            <!-- Grid column -->
+                </div><!-- main-post -->
+            </div><!-- col-lg-8 col-md-12 -->
+
+            <div class="col-lg-4 col-md-12 no-left-padding">
+
+                <div class="single-post info-area">
 
 
-        </div>
-    <div class="col-md-2 col-small-1">
-         <ul id="ct-socials";>
-  <li><a href="https://www.addtoany.com/add_to/facebook?linkurl=http%3A%2F%2F127.0.0.1%3A4550%2Fpage1%2F%7B%7B%20blog.ArtId%20%7D%7D&amp;linkname=" target="_blank"><img src="https://static.addtoany.com/buttons/facebook.svg" width="42" height="42" style="background-color:#3f4653"></a></li>
-<li><a href="https://www.addtoany.com/add_to/twitter?linkurl=http%3A%2F%2F127.0.0.1%3A4550%2Fpage1%2F%7B%7B%20blog.ArtId%20%7D%7D&amp;linkname=" target="_blank"><img src="https://static.addtoany.com/buttons/twitter.svg" width="42" height="42" style="background-color:#3f4653"></a></li>
-<li><a href="https://www.addtoany.com/add_to/google_plus?linkurl=http%3A%2F%2F127.0.0.1%3A4550%2Fpage1%2F%7B%7B%20blog.ArtId%20%7D%7D&amp;linkname=" target="_blank"><img src="https://static.addtoany.com/buttons/google_plus.svg" width="42" height="42" style="background-color:#3f4653"></a></li>
-<li><a href="https://www.addtoany.com/add_to/whatsapp?linkurl=http%3A%2F%2F127.0.0.1%3A4550%2Fpage1%2F%7B%7B%20blog.ArtId%20%7D%7D&amp;linkname=" target="_blank"><img src="https://static.addtoany.com/buttons/whatsapp.svg" width="42" height="42" style="background-color:#3f4653"></a></li>
-<li><a href="https://www.addtoany.com/add_to/linkedin?linkurl=http%3A%2F%2F127.0.0.1%3A4550%2Fpage1%2F%7B%7B%20blog.ArtId%20%7D%7D&amp;linkname=" target="_blank"><img src="https://static.addtoany.com/buttons/linkedin.svg" width="42" height="42" style="background-color:#3f4653"></a></li>
-<li><a href="https://www.addtoany.com/add_to/copy_link?linkurl=http%3A%2F%2F127.0.0.1%3A4550%2Fpage1%2F%7B%7B%20blog.ArtId%20%7D%7D&amp;linkname=" target="_blank"><img src="https://static.addtoany.com/buttons/link.svg" width="42" height="42" style="background-color:#3f4653"></a></li>
-</ul>
-        </div>
-    </div>
+                    <div class="sidebar-area subscribe-area">
+
+                        <h4 class="title"><b>SUBSCRIBE</b></h4>
+                        <div class="input-area">
+                            <form>
+                                <input class="email-input" type="text" placeholder="Enter your email">
+                                <button class="submit-btn" type="submit"><i class="icon ion-ios-email-outline"></i>
+                                </button>
+                            </form>
+                        </div>
+
+                    </div><!-- subscribe-area -->
+
+                    <div class="tag-area">
+
+                        <h4 class="title"><b>TAG CLOUD</b></h4>
+                        <ul>
+                            <li><a href="#">Manual</a></li>
+                            <li><a href="#">Liberty</a></li>
+                            <li><a href="#">Recomendation</a></li>
+                            <li><a href="#">Interpritation</a></li>
+                            <li><a href="#">Manual</a></li>
+                            <li><a href="#">Liberty</a></li>
+                            <li><a href="#">Recomendation</a></li>
+                            <li><a href="#">Interpritation</a></li>
+                        </ul>
+
+                    </div><!-- subscribe-area -->
+
+                </div><!-- info-area -->
+
+            </div><!-- col-lg-4 col-md-12 -->
+
+        </div><!-- row -->
+
+    </div><!-- container -->
+</section><!-- post-area -->
 
 
+<section class="recomended-area section">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100">
+                    <div class="single-post post-style-1">
+
+                        <div class="blog-image"><img src="{{ url_for ('static', filename='images/alex-lambley-205711.jpg' ) }}" alt="Blog Image"></div>
+
+                        <a class="avatar" href="#"><img src="images/icons8-team-355979.jpg" alt="Profile Image"></a>
+
+                        <div class="blog-info">
+
+                            <h4 class="title"><a href="#"><b>How Did Van Gogh's Turbulent Mind Depict One of the Most
+                                Complex
+                                Concepts in Physics?</b></a></h4>
+
+                            <ul class="post-footer">
+                                <li><a href="#"><i class="ion-heart"></i>57</a></li>
+                                <li><a href="#"><i class="ion-chatbubble"></i>6</a></li>
+                                <li><a href="#"><i class="ion-eye"></i>138</a></li>
+                            </ul>
+
+                        </div><!-- blog-info -->
+                    </div><!-- single-post -->
+                </div><!-- card -->
+            </div><!-- col-md-6 col-sm-12 -->
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100">
+                    <div class="single-post post-style-1">
+
+                        <div class="blog-image"><img src="{{ url_for ('static', filename='images/caroline-veronez-165944.jpg') }}" alt="Blog Image"></div>
+
+                        <a class="avatar" href="#"><img src="{{ url_for ('static', filename='images/icons8-team-355979.jpg') }}" alt="Profile Image"></a>
+
+                        <div class="blog-info">
+                            <h4 class="title"><a href="#"><b>How Did Van Gogh's Turbulent Mind Depict One of the Most
+                                Complex
+                                Concepts in Physics?</b></a></h4>
+
+                            <ul class="post-footer">
+                                <li><a href="#"><i class="ion-heart"></i>57</a></li>
+                                <li><a href="#"><i class="ion-chatbubble"></i>6</a></li>
+                                <li><a href="#"><i class="ion-eye"></i>138</a></li>
+                            </ul>
+                        </div><!-- blog-info -->
+
+                    </div><!-- single-post -->
+
+                </div><!-- card -->
+            </div><!-- col-md-6 col-sm-12 -->
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100">
+                    <div class="single-post post-style-1">
+
+                        <div class="blog-image"><img src="{{ url_for ('static', filename='images/marion-michele-330691.jpg') }}" alt="Blog Image"></div>
+
+                        <a class="avatar" href="#"><img src="{{ url_for ('static', filename='images/icons8-team-355979.jpg') }}" alt="Profile Image"></a>
+
+                        <div class="blog-info">
+                            <h4 class="title"><a href="#"><b>How Did Van Gogh's Turbulent Mind Depict One of the Most
+                                Complex
+                                Concepts in Physics?</b></a></h4>
+
+                            <ul class="post-footer">
+                                <li><a href="#"><i class="ion-heart"></i>57</a></li>
+                                <li><a href="#"><i class="ion-chatbubble"></i>6</a></li>
+                                <li><a href="#"><i class="ion-eye"></i>138</a></li>
+                            </ul>
+                        </div><!-- blog-info -->
+
+                    </div><!-- single-post -->
+
+                </div><!-- card -->
+            </div><!-- col-md-6 col-sm-12 -->
+
+        </div><!-- row -->
+
+    </div><!-- container -->
 </section>
 <!-- Section: Blog v.4 -->
+<script src="{{ url_for ('static', filename='common-js/jquery-3.1.1.min.js') }}"></script>
 
+<script src="{{ url_for ('static', filename='common-js/tether.min.js') }}"></script>
+
+<script src="{{ url_for ('static', filename='common-js/bootstrap.js') }}"></script>
+
+<script src="{{ url_for ('static', filename='common-js/scripts.js') }}"></script>
 {% endblock %}

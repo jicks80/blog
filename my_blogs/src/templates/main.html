@@ -13,6 +13,8 @@
     <!-- Material Design Bootstrap -->
     <link rel="stylesheet" href="{{ url_for('static',filename='css1/mdb.min1.css') }}"/>
 
+     <link rel="stylesheet" href="{{ url_for('static',filename='css1/footer.css') }}"/>
+
      {% block head %}
 
     {% endblock %}
@@ -31,8 +33,7 @@
 
 
             </script>
-<!-- particles.js container -->
-<div id="particles-js"></div>
+
 
 <!-- Start your project here-->
 <!-- header portion-->
@@ -88,9 +89,7 @@
 
 <!-- main portion -->
 <main class="main">
-<div class="col-md-2">
 
-        </div>
 
 {% block content %}
 
@@ -102,20 +101,81 @@
 
 </main>
 <!--footer-->
-<footer></footer>
+
+ <!--==========================
+Footer
+============================-->
+<footer id="footer">
+<div class="footer-top">
+<div class="container">
+<div class="row">
+
+<div class="col-lg-3 col-md-6 footer-info">
+<h3>Mahadev</h3>
+<p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+</div>
+
+<div class="col-lg-3 col-md-6 footer-links">
+<h4>Useful Links</h4>
+<ul>
+<li><i class="ion-ios-arrow-right"></i> <a href="#">Home</a></li>
+<li><i class="ion-ios-arrow-right"></i> <a href="#">About us</a></li>
+<li><i class="ion-ios-arrow-right"></i> <a href="#">Services</a></li>
+<li><i class="ion-ios-arrow-right"></i> <a href="#">Terms of service</a></li>
+<li><i class="ion-ios-arrow-right"></i> <a href="#">Privacy policy</a></li>
+</ul>
+</div>
+
+<div class="col-lg-3 col-md-6 footer-contact">
+<h4>Contact Us</h4>
+<p>
+INDIA<br>
+<!--New Delhi <br>-->
+<strong>Phone:</strong> +91 85858585858<br>
+<strong>Email:</strong> notavailable@gmail.com<br>
+</p>
+
+<div class="social-links">
+<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+<a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+<a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+<a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6 footer-newsletter">
+<h4>Our Newsletter</h4>
+<p>Our newsletters give you everything you need to know to keep up with the world of data science, Machine Learning, Chatbots, etc. Our creators put in the hard work so that you don't have to.</p>
+<form action="" method="post">
+<input type="email" name="email"><input type="submit" value="Subscribe">
+</form>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="copyright">
+&copy; Copyright 2018<strong> Mahadev</strong>. All Rights Reserved
+</div>
+<div class="credits">
+<!--
+All the links in the footer should remain intact.
+You can delete the links only if you purchased the pro version.
+Licensing information: https://bootstrapmade.com/license/
+Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=BizPage
+-->
+<!-- Best <a href="https://bootstrapmade.com/">Bootstrap Templates</a> by BootstrapMade-->
+</div>
+</div>
+</footer><!-- #footer -->
+ <!-- / footer ends -->
 
 
-<!-- /Start your project here-->
-<!-- SCRIPTS -->
-<!-- particle js -->
 
-
-<!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
-<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-<script type="text/javascript" src="{{ url_for('static',filename='js/particle.js') }}"></script>
-
-<!--/ particle js-->
 
 
 <!-- JQuery -->
